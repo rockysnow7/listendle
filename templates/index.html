@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Listendle</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <script src="https://kit.fontawesome.com/8aaa2ebfb9.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="noselect">
+        <audio id="player" src="static/song-snippets/snip-{{ secs }}.mp3" type="audio/mpeg"></audio>
+        <h1 id="title">Listendle</h1>
+        <h3 id="profile">
+            Made by <a href="https://github.com/rockysnow7" target="_blank">rockysnow7</a>
+        </h3>
+        <h3 id="playlist">
+            Listen to the
+            <a href="https://open.spotify.com/playlist/5q8lwvarxPFAj1Hfj18h7q?si=197428c31b6a4257" target="_blank">playlist</a>
+        </h3>
+        <hr>
+        {% for i in range(6) %}
+        <h3 class="box">
+            {% if history[i]["type"] == "Blank" %}
+            <span class="invisible">[blank]</span>
+            {% elif history[i]["type"] == "Skip" %}
+            <span>
+                Skipped
+            </span>
+            {% else %}
+            <span class="incorrect-guess-entry">
+                Guessed <b>{{ history[i]["name"] }} by {{ history[i]["artist"] }}</b>
+            </span>
+            {% endif %}
+        </h3>
+        {% endfor %}
+        <form method="post" id="guess-form">
+            <select name="guess" id="select-song">
+                {% for song in songs %}
+                <option>{{ song }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" id="button-guess">Guess</button>
+        </form>
+        <progress class="song-secs" max="30" value="{{ secs }}"></progress>
+        <div class="center" id="song-buttons">
+            <button class="song-button" id="play"
+                onclick="document.getElementById('player').play()">
+                <i class="fa-solid fa-play fa-lg"></i>
+            </button>
+            <button type="button" class="song-button" id="skip"
+                onclick="window.location.href='{{ url_for("skip") }}'">
+                <i class="fa-solid fa-forward fa-lg"></i>
+            </button>
+        </div>
+        <h3 id="progress-secs">0:{{ secs_display }}</h3>
+        <h3 id="total-secs">0:30</h3>
+    </body>
+</html>

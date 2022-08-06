@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Listendle</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <script src="https://kit.fontawesome.com/8aaa2ebfb9.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="noselect">
+        <audio id="player" src="static/song-snippets/song.mp3" type="audio/mpeg"></audio>
+        <h1 id="title">Listendle</h1>
+        <h3 id="profile">
+            Made by <a href="https://github.com/rockysnow7" target="_blank">rockysnow7</a>
+        </h3>
+        <h3 id="playlist">
+            Listen to the
+            <a href="https://open.spotify.com/playlist/5q8lwvarxPFAj1Hfj18h7q?si=197428c31b6a4257" target="_blank">playlist</a>
+        </h3>
+        <hr>
+        <h3>The song was...</h3>
+        <h2><b>{{ song_name }}</b> by <b>{{ song_artist }}</b></h2>
+        <div class="center" id="result-div">
+            <h2 id="result-word">{{ result_word }}</h2>
+            <h3>{{ score_text }}</h3>
+            <h3>{{ result_text }}</h3>
+            <button type="button" id="share"
+                onclick="navigator.clipboard.writeText('{{ share_text }}')">
+                Share&nbsp;&nbsp;
+                <i class="fa-solid fa-share-nodes"></i>
+            </button>
+        </div>
+        <div class="center">
+            <h3 id="come-back">Come back tomorrow!</h3>
+        </div>
+        <progress class="song-secs" max="30" value="30"></progress>
+        <div class="center" id="song-buttons">
+            <button class="song-button" id="play"
+                onclick="document.getElementById('player').play()">
+                <i class="fa-solid fa-play fa-lg"></i>
+            </button>
+        </div>
+    </body>
+</html>

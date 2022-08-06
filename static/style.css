@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto:wght@300;400&display=swap');
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #121212;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: darkgrey;
+    text-align: center;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    height: 50px;
+    border: none;
+    background-color: #3d7c22;
+    color: white;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+select {
+    -webkit-appearance: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid darkgrey;
+    height: 1px;
+}
+
+#title {
+    margin: auto;
+    width: 50%;
+}
+
+#profile {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+#playlist {
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.box {
+    border: 1px solid #444;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.invisible {
+    color: #121212;
+}
+
+#result-word {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#select-song {
+    position: absolute;
+    bottom: 90px;
+    left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    width: 90%;
+    height: 50px;
+    padding-right: 10px;
+}
+
+#button-guess {
+    position: absolute;
+    bottom: 90px;
+    right: 10px;
+    transition-duration: 0.2s;
+}
+
+.play-song {
+    margin: auto;
+    width: 60%;
+    margin-top: 5%;
+}
+
+.song-secs {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 13px;
+    position: fixed;
+    bottom: 60px;
+    left: 0px;
+}
+
+.song-secs::-webkit-progress-bar {
+    background-color: #444;
+}
+
+.song-secs::-webkit-progress-value {
+    background-color: green;
+}
+
+#song-buttons {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+.song-button {
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+#play {
+    right: 10px;
+}
+
+#skip {
+    left: 10px;
+}
+
+#result-div {
+    display: block;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+}
+
+#button-guess:hover, #share:hover {
+    background-color: #31631b;
+    color: lightgrey;
+}
+
+#button-guess:focus , #share:focus {
+    background-color: #204212;
+    color: white;
+}
+
+#come-back {
+    position: absolute;
+    bottom: 70px;
+    color: white;
+}
+
+#progress-secs, #total-secs {
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+
+#progress-secs {
+    left: 20px;
+}
+
+#total-secs {
+    right: 20px;
+}
+
+.incorrect-guess-entry {
+    color: #880000;
+    font-weight: 300;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                          supported by Chrome, Edge, Opera and Firefox */
+}

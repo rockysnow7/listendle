@@ -1,3 +1,6 @@
 used-songs.csv
 song.json
 static/song-snippets
+.DS_Store
+__pycache__
+keys.py

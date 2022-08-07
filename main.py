@@ -13,7 +13,7 @@ def complete_share_text(share_text: str | None = None) -> str:
     if share_text is None:
         share_text = request.cookies["share_text"]
     share_text += "⬜" * (6 - len(share_text))
-    share_text = f"#Listendle #{game.game_num}\\n\\n🔊" + share_text + "\\n\\nhttps://www.example.com"
+    share_text = f"#Listendle #{game.game_num}\\n\\n🔊" + share_text + "\\n\\nhttps://listendle.herokuapp.com"
 
     return share_text
 

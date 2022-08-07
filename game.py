@@ -8,7 +8,6 @@ import deezer
 
 from pydub import AudioSegment
 from spotipy.oauth2 import SpotifyClientCredentials
-from keys import CLIENT_ID, CLIENT_SECRET
 from song import Song
 
 
@@ -38,8 +37,8 @@ class Game:
 
     def get_all_tracks(self) -> list[dict]:
         sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(
-            CLIENT_ID,
-            CLIENT_SECRET,
+            os.environ["SPOTIFY_CLIENT_ID"],
+            os.environ["SPOTIFY_CLIENT_SECRET"],
         ))
 
         results = sp.playlist_tracks(PLAYLIST_ID, fields="items,next")

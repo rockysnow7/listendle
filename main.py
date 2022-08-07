@@ -135,7 +135,7 @@ def result() -> str:
         result_word = random.choice(WON_RESULT_WORDS)
         result_text = f"You guessed the song in {secs} {word}."
     else:
-        result_word = random.choice(WON_RESULT_WORDS)
+        result_word = random.choice(LOST_RESULT_WORDS)
         result_text = "You didn't guess the song correctly."
 
     score_text = " ".join(list(request.cookies["share_text"].split("\\n\\n")[1][1:]))

@@ -12,7 +12,7 @@ from song import Song
 
 
 PLAYLIST_ID = "5q8lwvarxPFAj1Hfj18h7q"
-START_DATE = datetime.datetime(2022, 8, 5)
+START_DATE = datetime.datetime(2022, 8, 7)
 SEC_STEPS = [1, 2, 4, 7, 11, 16, 30]
 
 

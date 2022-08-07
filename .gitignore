@@ -5,3 +5,4 @@ song.json
 static/song-snippets
 keys.py
 .cache
+logs.txt

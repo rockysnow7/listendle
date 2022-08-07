@@ -1,5 +1,6 @@
 import json
 import random
+import time
 
 from flask import Flask, render_template, url_for, make_response, request, redirect
 from game import Game, SEC_STEPS
@@ -40,6 +41,7 @@ def index() -> str:
             secs=1,
             secs_display="01",
             history=json.dumps(HISTORY_DEFAULT),
+            show_blank=True,
         ))
         resp.set_cookie("secs", "1")
         resp.set_cookie("date", game.today_song.date)
@@ -96,6 +98,7 @@ def index() -> str:
         secs=int(request.cookies["secs"]),
         secs_display=request.cookies["secs"].zfill(2),
         history=json.loads(request.cookies["history"]),
+        show_blank=False,
     )
 
 @app.route("/skip", methods=["GET", "POST"])

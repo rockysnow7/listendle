@@ -19,7 +19,7 @@
         <hr>
         {% for i in range(6) %}
         <h3 class="box">
-            {% if history[i]["type"] == "Blank" %}
+            {% if show_blank or history[i]["type"] == "Blank" %}
             <span class="invisible">[blank]</span>
             {% elif history[i]["type"] == "Skip" %}
             <span>

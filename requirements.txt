@@ -1,0 +1,4 @@
+spotipy==2.18.0
+deezer-python==5.5.0
+pydub==0.25.1
+Flask==2.2.0

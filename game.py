@@ -3,7 +3,6 @@ import json
 import random
 import datetime
 import urllib
-import playsound
 import spotipy
 import deezer
 

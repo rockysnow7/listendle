@@ -99,6 +99,9 @@ class Game:
             with open("song.json", "w+") as f:
                 json.dump(Song("", "", "", "").__dict__, f, indent=4)
 
+            with open("log.txt", "a+") as f:
+                f.write(f"{datetime.datetime.now()}: created new song.json\n")
+
         with open("song.json", "r") as f:
             song = json.load(f)
         song = Song(*song.values())
@@ -119,7 +122,7 @@ class Game:
             self.save_song_as_used(song)
 
             with open("log.txt", "a+") as f:
-                f.write(f"{datetime.datetime.now()}: got new song {str(song)}.\n")
+                f.write(f"{datetime.datetime.now()}: got new song {str(song)}\n")
 
             return song
         return song

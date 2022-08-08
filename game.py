@@ -118,6 +118,9 @@ class Game:
 
             self.save_song_as_used(song)
 
+            with open("log.txt", "a+") as f:
+                f.write(f"got new song {str(song)} at {song.date}.\n")
+
             return song
         return song
 
